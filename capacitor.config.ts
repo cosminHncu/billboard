@@ -1,9 +1,9 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.billboard.ellipse',
+  appId: 'com.example.app',
   appName: 'pilot-ellipse',
-  webDir: 'build',
+  webDir: 'dist',
   server: {
     androidScheme: 'https'
   }

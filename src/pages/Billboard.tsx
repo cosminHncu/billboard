@@ -16,8 +16,12 @@ const Billboard: React.FC = () => {
                   : textLength <= 10
                   ? "moving-text2"
                   : textLength <= 15
-                  ? "movie-text3"
-                  : "moving-text3"
+                  ? "moving-text3"
+                  : textLength <= 20
+                  ? "moving-text4"
+                  : textLength <= 25
+                  ? "moving-text5"
+                  : "moving-text6"
               }`}
             >
               {billboardTxt.toUpperCase()}

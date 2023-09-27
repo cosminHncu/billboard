@@ -42,9 +42,10 @@ export default function TextArea() {
           aria-label="Custom textarea"
           placeholder="TYPE HERE"
           className="custom"
+          style={{ textTransform: "uppercase" }}
           //helperText="Helper text"
           //counter={true}
-          maxlength={100}
+          maxlength={30}
         ></IonInput>
       </IonCol>
       <IonCol size="3" className="flex-center">

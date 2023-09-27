@@ -2,12 +2,12 @@
   transform: rotate(90deg);
   width: 100vw;
 }
-.moving-text3 {
+.moving-text1 {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   white-space: nowrap;
   font-weight: bolder;
-  animation: moveText3 10s linear infinite;
+  animation: moveText1 3s linear infinite;
   font-size: 31rem;
   color: #0000ff;
   margin: 0;
@@ -24,39 +24,98 @@
   margin: 0;
   padding: 0;
 }
-.moving-text1 {
+.moving-text3 {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   white-space: nowrap;
   font-weight: bolder;
-  animation: moveText1 2s linear infinite;
+  animation: moveText3 7s linear infinite;
+  font-size: 31rem;
+  color: #0000ff;
+  margin: 0;
+  padding: 0;
+}
+.moving-text4 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  font-weight: bolder;
+  animation: moveText4 7s linear infinite;
+  font-size: 31rem;
+  color: #0000ff;
+  margin: 0;
+  padding: 0;
+}
+.moving-text5 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  font-weight: bolder;
+  animation: moveText5 9s linear infinite;
+  font-size: 31rem;
+  color: #0000ff;
+  margin: 0;
+  padding: 0;
+}
+.moving-text6 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  font-weight: bolder;
+  animation: moveText6 12s linear infinite;
   font-size: 31rem;
   color: #0000ff;
   margin: 0;
   padding: 0;
 }
 
-@keyframes moveText3 {
+@keyframes moveText1 {
   0% {
-    transform: translateX(100%);
+    transform: translateX(200%);
   }
   100% {
-    transform: translateX(-2200%);
+    transform: translateX(-500%);
   }
 }
+
 @keyframes moveText2 {
   0% {
-    transform: translateX(100%);
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(-1000%);
+  }
+}
+
+@keyframes moveText3 {
+  0% {
+    transform: translateX(200%);
   }
   100% {
     transform: translateX(-1200%);
   }
 }
-@keyframes moveText1 {
+@keyframes moveText4 {
   0% {
-    transform: translateX(100%);
+    transform: translateX(200%);
   }
   100% {
-    transform: translateX(-350%);
+    transform: translateX(-1600%);
+  }
+}
+@keyframes moveText5 {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(-1800%);
+  }
+}
+@keyframes moveText6 {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(-2200%);
   }
 }
