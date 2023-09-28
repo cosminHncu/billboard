@@ -78,13 +78,12 @@ const About: React.FC = () => {
             <div>
               <IonText>
                 Ellipse gives you your own personal billboard in your pocket. A
-                straight-forward way to share your message. Write, display, show
-                the world.
+                straight-forward way to share your message.
               </IonText>
             </div>
             <br />
             <div>
-              <IonText>Write, display & show the world.</IonText>
+              <IonText>Type, display & show the world.</IonText>
             </div>
           </IonCol>
         </IonRow>

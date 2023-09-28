@@ -4,6 +4,10 @@ ion-grid {
 ion-list {
   padding: 0px !important;
 }
+ion-content {
+  --bacground: #000;
+  background-color: #000;
+}
 .flex-row {
   flex-direction: row;
 }
