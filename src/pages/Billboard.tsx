@@ -15,11 +15,11 @@ const Billboard: React.FC = () => {
   console.log(textLength);
   return (
     <IonPage>
-      <IonContent
-        fullscreen={true}
-        color={lightMode ? "tertiary" : "secondary"}
-      >
-        <IonRouterLink routerLink="/home">
+      <IonRouterLink routerLink="/home">
+        <IonContent
+          fullscreen={true}
+          color={lightMode ? "tertiary" : "secondary"}
+        >
           <div className="rotate">
             <p
               className={`rotate ${
@@ -47,8 +47,8 @@ const Billboard: React.FC = () => {
               {billboardTxt.toUpperCase()}
             </p>
           </div>
-        </IonRouterLink>
-      </IonContent>
+        </IonContent>
+      </IonRouterLink>
     </IonPage>
   );
 };

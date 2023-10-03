@@ -4,3 +4,7 @@
   align-items: center;
   height: 90%;
 }
+ion-content {
+  background: transparent !important;
+  --background: transparent !important;
+}

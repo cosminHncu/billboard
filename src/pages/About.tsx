@@ -12,22 +12,12 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import { closeCircleOutline } from "ionicons/icons";
-import { invertModeOutline } from "ionicons/icons";
 import { TypeAnimation } from "react-type-animation";
 import "./About.css";
 import { useBillboardContext } from "../context/BillboardContext";
-import { useEffect } from "react";
 
 const About: React.FC = () => {
-  const { lightMode, setLightMode } = useBillboardContext();
-
-  useEffect(() => {
-    console.log(lightMode);
-  }, [lightMode]);
-
-  const handleLightMode = () => {
-    setLightMode((prev: boolean) => !prev);
-  };
+  const { lightMode } = useBillboardContext();
 
   return (
     <IonPage>
