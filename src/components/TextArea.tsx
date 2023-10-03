@@ -36,7 +36,6 @@ export default function TextArea() {
     <IonRow className={lightMode ? "input-border--light" : "input-border"}>
       <IonCol size="9">
         <IonInput
-          clearInput={true}
           autoCapitalize="characters"
           onInput={handleInputChange}
           aria-label="Custom textarea"

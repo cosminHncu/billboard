@@ -4,7 +4,11 @@
   align-items: center;
   height: 90%;
 }
-ion-content {
-  background: transparent !important;
-  --background: transparent !important;
+ion-header.color-page {
+  border: 3px solid #000 !important;
+  outline: 3px solid #000 !important;
+}
+ion-header.color-page--light {
+  border: 3px solid #fff !important;
+  outline: 3px solid #fff !important;
 }

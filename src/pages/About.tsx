@@ -21,7 +21,11 @@ const About: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader className="ion-no-border">
+      <IonHeader
+        className={`ion-no-border ${
+          lightMode ? "color-page--light" : "color-page"
+        }`}
+      >
         <IonToolbar color={lightMode ? "tertiary" : "secondary"}>
           <IonButtons className="p-2" slot="end">
             <IonRouterLink routerLink="/home">
