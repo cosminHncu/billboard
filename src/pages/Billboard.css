@@ -195,3 +195,7 @@
     transform: translateX(-230%);
   }
 }
+html,
+body {
+  background: transparent !important;
+}
