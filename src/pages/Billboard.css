@@ -7,7 +7,7 @@
   font-family: Arial, Helvetica, sans-serif;
   white-space: nowrap;
   font-weight: bolder;
-  animation: moveText1 3s linear infinite;
+  animation: moveText1 2s linear infinite;
   font-size: 31rem;
   color: #0000ff;
   margin: 0;
@@ -18,7 +18,7 @@
   font-family: Arial, Helvetica, sans-serif;
   white-space: nowrap;
   font-weight: bolder;
-  animation: moveText2 5s linear infinite;
+  animation: moveText2 3s linear infinite;
   font-size: 31rem;
   color: #0000ff;
   margin: 0;
@@ -29,7 +29,7 @@
   font-family: Arial, Helvetica, sans-serif;
   white-space: nowrap;
   font-weight: bolder;
-  animation: moveText3 7s linear infinite;
+  animation: moveText3 4s linear infinite;
   font-size: 31rem;
   color: #0000ff;
   margin: 0;
@@ -40,7 +40,7 @@
   font-family: Arial, Helvetica, sans-serif;
   white-space: nowrap;
   font-weight: bolder;
-  animation: moveText4 7s linear infinite;
+  animation: moveText4 5s linear infinite;
   font-size: 31rem;
   color: #0000ff;
   margin: 0;
@@ -51,7 +51,7 @@
   font-family: Arial, Helvetica, sans-serif;
   white-space: nowrap;
   font-weight: bolder;
-  animation: moveText5 9s linear infinite;
+  animation: moveText5 6s linear infinite;
   font-size: 31rem;
   color: #0000ff;
   margin: 0;
@@ -62,7 +62,51 @@
   font-family: Arial, Helvetica, sans-serif;
   white-space: nowrap;
   font-weight: bolder;
-  animation: moveText6 12s linear infinite;
+  animation: moveText6 7s linear infinite;
+  font-size: 31rem;
+  color: #0000ff;
+  margin: 0;
+  padding: 0;
+}
+.moving-text7 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  font-weight: bolder;
+  animation: moveText7 8s linear infinite;
+  font-size: 31rem;
+  color: #0000ff;
+  margin: 0;
+  padding: 0;
+}
+.moving-text8 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  font-weight: bolder;
+  animation: moveText8 9s linear infinite;
+  font-size: 31rem;
+  color: #0000ff;
+  margin: 0;
+  padding: 0;
+}
+.moving-text9 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  font-weight: bolder;
+  animation: moveText9 10s linear infinite;
+  font-size: 31rem;
+  color: #0000ff;
+  margin: 0;
+  padding: 0;
+}
+.moving-text10 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  font-weight: bolder;
+  animation: moveText10 11s linear infinite;
   font-size: 31rem;
   color: #0000ff;
   margin: 0;
@@ -74,7 +118,7 @@
     transform: translateX(200%);
   }
   100% {
-    transform: translateX(-500%);
+    transform: translateX(-300%);
   }
 }
 
@@ -83,7 +127,7 @@
     transform: translateX(200%);
   }
   100% {
-    transform: translateX(-1000%);
+    transform: translateX(-550%);
   }
 }
 
@@ -92,7 +136,7 @@
     transform: translateX(200%);
   }
   100% {
-    transform: translateX(-1200%);
+    transform: translateX(-800%);
   }
 }
 @keyframes moveText4 {
@@ -100,7 +144,7 @@
     transform: translateX(200%);
   }
   100% {
-    transform: translateX(-1600%);
+    transform: translateX(-1050%);
   }
 }
 @keyframes moveText5 {
@@ -108,7 +152,7 @@
     transform: translateX(200%);
   }
   100% {
-    transform: translateX(-1800%);
+    transform: translateX(-1300%);
   }
 }
 @keyframes moveText6 {
@@ -116,6 +160,38 @@
     transform: translateX(200%);
   }
   100% {
-    transform: translateX(-2200%);
+    transform: translateX(-1550%);
+  }
+}
+@keyframes moveText7 {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(-1800%);
+  }
+}
+@keyframes moveText8 {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(-2050%);
+  }
+}
+@keyframes moveText9 {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(-2300%);
+  }
+}
+@keyframes moveText10 {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(-230%);
   }
 }

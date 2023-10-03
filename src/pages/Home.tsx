@@ -11,19 +11,41 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import "./Home.css";
-import { informationCircleOutline } from "ionicons/icons";
+import { informationCircleOutline, invertModeOutline } from "ionicons/icons";
 import TextArea from "../components/TextArea";
+import { useBillboardContext } from "../context/BillboardContext";
+import { KeepAwake } from "@capacitor-community/keep-awake";
+import { useEffect } from "react";
 
 const Home: React.FC = () => {
+  const { setLightMode, lightMode } = useBillboardContext();
+  const handleLightMode = () => {
+    setLightMode((prev: boolean) => !prev);
+  };
+  const keepAwake = async () => {
+    await KeepAwake.keepAwake();
+  };
+  useEffect(() => {
+    keepAwake();
+  }, []);
+
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar color={"secondary"}>
-          <IonButtons className="p-2" slot="primary">
+      <IonHeader className="ion-no-border">
+        <IonToolbar color={lightMode ? "tertiary" : "secondary"}>
+          <IonButtons className="p-2" slot="start">
+            <div>
+              <IonButton onClick={handleLightMode} slot="primary">
+                <IonIcon icon={invertModeOutline} />
+              </IonButton>
+            </div>
+          </IonButtons>
+
+          <IonButtons className="p-2" slot="end">
             <IonRouterLink routerLink="/about">
               <IonButton>
                 <IonIcon
-                  color="tertiary"
+                  color={lightMode ? "secondary" : "tertiary"}
                   size="large"
                   icon={informationCircleOutline}
                 />
@@ -32,7 +54,11 @@ const Home: React.FC = () => {
           </IonButtons>
         </IonToolbar>
       </IonHeader>
-      <IonContent className="ion-padding " color={"secondary"} fullscreen>
+      <IonContent
+        className="ion-padding "
+        color={lightMode ? "tertiary" : "secondary"}
+        fullscreen
+      >
         <IonRow className="center">
           <IonCol size="12">
             <TextArea />

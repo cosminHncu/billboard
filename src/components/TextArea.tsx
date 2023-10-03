@@ -10,12 +10,11 @@ import {
 import { useBillboardContext } from "../context/BillboardContext";
 
 export default function TextArea() {
-  const { setBillboardTxt, setTextLength } = useBillboardContext();
-  const [isMoving, setIsMoving] = useState(true);
-  const [inputText, setInputText] = useState("");
+  const { setBillboardTxt, setTextLength, lightMode, inputText, setInputText } =
+    useBillboardContext();
+
   const [error, setError] = useState(false);
   const router = useIonRouter();
-
   const handleInputChange = (event: any) => {
     setError(false);
     setInputText(event.target.value.toUpperCase());
@@ -25,7 +24,7 @@ export default function TextArea() {
     setTextLength(inputText.length);
     if (inputText === "") {
       setBillboardTxt("FOLLOW @ELLLLLLLLLLLLLIPSE");
-      setTextLength(50);
+      setTextLength(30);
       router.push("/billboard");
     } else {
       setBillboardTxt(inputText);
@@ -34,23 +33,22 @@ export default function TextArea() {
   };
 
   return (
-    <IonRow className="input-border">
+    <IonRow className={lightMode ? "input-border--light" : "input-border"}>
       <IonCol size="9">
         <IonInput
           autoCapitalize="characters"
           onInput={handleInputChange}
           aria-label="Custom textarea"
           placeholder="TYPE HERE"
-          className="custom"
+          className={lightMode ? "custom--light" : "custom"}
           style={{ textTransform: "uppercase" }}
-          //helperText="Helper text"
-          //counter={true}
           maxlength={30}
+          value={inputText}
         ></IonInput>
       </IonCol>
       <IonCol size="3" className="flex-center">
         <IonButton
-          className="border-bottom"
+          className="border-bottom "
           strong
           fill="clear"
           onClick={handleSubmit}

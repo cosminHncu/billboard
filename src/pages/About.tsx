@@ -12,22 +12,32 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import { closeCircleOutline } from "ionicons/icons";
+import { invertModeOutline } from "ionicons/icons";
 import { TypeAnimation } from "react-type-animation";
 import "./About.css";
+import { useBillboardContext } from "../context/BillboardContext";
+import { useEffect } from "react";
 
 const About: React.FC = () => {
+  const { lightMode, setLightMode } = useBillboardContext();
+
+  useEffect(() => {
+    console.log(lightMode);
+  }, [lightMode]);
+
+  const handleLightMode = () => {
+    setLightMode((prev: boolean) => !prev);
+  };
+
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar color={"secondary"}>
-          <IonButtons className="p-2" slot="primary">
-            <IonRouterLink
-              routerLink="/home
-            "
-            >
+      <IonHeader className="ion-no-border">
+        <IonToolbar color={lightMode ? "tertiary" : "secondary"}>
+          <IonButtons className="p-2" slot="end">
+            <IonRouterLink routerLink="/home">
               <IonButton>
                 <IonIcon
-                  color="tertiary"
+                  color={lightMode ? "secondary" : "tertiary"}
                   size="large"
                   icon={closeCircleOutline}
                 />
@@ -36,11 +46,14 @@ const About: React.FC = () => {
           </IonButtons>
         </IonToolbar>
       </IonHeader>
-      <IonContent className="ion-padding " color={"secondary"} fullscreen>
+      <IonContent
+        className="ion-padding "
+        color={lightMode ? "tertiary" : "secondary"}
+        fullscreen
+      >
         <IonRow className="center">
           <IonCol size="12">
             <TypeAnimation
-              className="heading"
               sequence={[
                 "ELLIPSE <3",
                 1000,
@@ -66,13 +79,7 @@ const About: React.FC = () => {
               wrapper="span"
               cursor={true}
               repeat={Infinity}
-              style={{
-                width: "100%",
-                textAlign: "left",
-                fontSize: "4rem",
-                color: "#fff",
-                fontWeight: "bolder",
-              }}
+              className={lightMode ? "heading--light" : "heading"}
             />
           </IonCol>
           <IonCol size="12">

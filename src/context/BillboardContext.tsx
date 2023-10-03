@@ -5,6 +5,10 @@ interface BillboardCtxType {
   setBillboardTxt: any;
   textLength: any;
   setTextLength: any;
+  lightMode: boolean;
+  setLightMode: any;
+  inputText: string;
+  setInputText: any;
 }
 
 const BillboardContext = createContext<BillboardCtxType | undefined>(undefined);
@@ -26,10 +30,16 @@ export const BillboardCtxProvider: React.FC<BillboardContextProviderProps> = ({
 }) => {
   const [billboardTxt, setBillboardTxt] = useState("");
   const [textLength, setTextLength] = useState(null);
+  const [lightMode, setLightMode] = useState(false);
+  const [inputText, setInputText] = useState("");
   const value: BillboardCtxType = {
     billboardTxt,
-    setBillboardTxt,
+    lightMode,
     textLength,
+    inputText,
+    setInputText,
+    setLightMode,
+    setBillboardTxt,
     setTextLength,
   };
 
