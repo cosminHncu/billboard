@@ -12,9 +12,9 @@ const Billboard: React.FC = () => {
   useEffect(() => {
     keepAwake();
   }, []);
-  console.log(textLength);
+
   return (
-    <IonPage>
+    <IonPage className={lightMode ? "light-screen" : "dark-screen"}>
       <IonRouterLink routerLink="/home">
         <IonContent
           fullscreen={true}

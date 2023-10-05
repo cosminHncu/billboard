@@ -196,6 +196,10 @@
   }
 }
 html,
-body {
-  background: transparent !important;
+body.dark-screen {
+  background: #000 !important;
+}
+html,
+body.light-screen {
+  background: #fff !important;
 }
