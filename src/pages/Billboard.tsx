@@ -14,12 +14,9 @@ const Billboard: React.FC = () => {
   }, []);
 
   return (
-    <IonPage className={lightMode ? "light-screen" : "dark-screen"}>
-      <IonRouterLink routerLink="/home">
-        <IonContent
-          fullscreen={true}
-          color={lightMode ? "tertiary" : "secondary"}
-        >
+    <IonRouterLink routerLink="/home">
+      <IonPage>
+        <IonContent fullscreen color={lightMode ? "tertiary" : "secondary"}>
           <div className="rotate">
             <p
               className={`rotate ${
@@ -48,8 +45,8 @@ const Billboard: React.FC = () => {
             </p>
           </div>
         </IonContent>
-      </IonRouterLink>
-    </IonPage>
+      </IonPage>
+    </IonRouterLink>
   );
 };
 

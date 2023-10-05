@@ -195,11 +195,8 @@
     transform: translateX(-230%);
   }
 }
+
 html,
-body.dark-screen {
-  background: #000 !important;
-}
-html,
-body.light-screen {
-  background: #fff !important;
+body {
+  background: #000;
 }
